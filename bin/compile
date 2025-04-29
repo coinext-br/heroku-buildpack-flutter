@@ -32,6 +32,8 @@ function indent() {
 BUILD_DIR=${1:-}
 CACHE_DIR=${2:-}
 
+print "Flutter build pack: start"
+
 export_env_dir "$3"
 
 # Create the cache directory if not exist.
