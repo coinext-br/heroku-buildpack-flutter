@@ -135,8 +135,11 @@ if [ ! -f $BUILD_DIR/static.json ]; then
 fi
 
 if [ "$FLUTTER_CLEANUP" == false ]; then
-  print "Disk usage"
+  print "General disk usage"
   du -sm * .*
+  print ".flutter disk usage"
+  du -sm .flutter/*
+  du -sm .flutter/*/*
 
   print "Setting up the Dart & Flutter command line tools"
 
