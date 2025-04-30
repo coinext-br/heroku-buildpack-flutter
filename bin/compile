@@ -135,6 +135,9 @@ if [ ! -f $BUILD_DIR/static.json ]; then
 fi
 
 if [ "$FLUTTER_CLEANUP" == false ]; then
+  print "Disk usage"
+  du -sm * .*
+
   print "Setting up the Dart & Flutter command line tools"
 
   # Create a profile.d script so that CLI commands are in PATH
